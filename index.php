@@ -18,7 +18,7 @@
 			WHERE toynum= :id;";	// :id is a placeholder for value provided later 
 		                               // It's a parameterized query that helps prevent SQL injection attacks and ensures safer interaction with the database.
 
-
+									   
 		// Execute the SQL query using the pdo function and fetch the result
 		$toy = pdo($pdo, $sql, ['id' => $id])->fetch();		// Associative array where 'id' is the key and $id is the value. Used to bind the value of $id to the placeholder :id in  SQL query.
 
@@ -26,13 +26,17 @@
 		return $toy;
 	}
 
-	// Retrieve info about toy with ID '0001' from the db using provided PDO connection
+	// Retrieve info about toys from the db using provided PDO connection
 	$toy1 = get_toy($pdo, '0001');
-	
-
-	/*
-	 * TO-DO: Retrieve info for ALL remaining toys from the db
-	 */
+	$toy2 = get_toy($pdo, '0002');
+	$toy3 = get_toy($pdo, '0003');
+	$toy4 = get_toy($pdo, '0004');
+	$toy5 = get_toy($pdo, '0005');
+	$toy6 = get_toy($pdo, '0006');
+	$toy7 = get_toy($pdo, '0007');
+	$toy8 = get_toy($pdo, '0008');
+	$toy9 = get_toy($pdo, '0009');
+	$toy10 = get_toy($pdo, '0010');
 
 
 // Closing PHP tag  ?> 
@@ -92,80 +96,147 @@
   				</div>
 
 
-  				<!-- 
-				  -- TO DO: Fill in the rest of the cards for ALL remaining toys from the db
-  				  -->
-
   				<div class="toy-card">
-  					<a href="toy.php?toynum=<?= '' ?>">
-  						<img src="<?= '' ?>" alt="<?= '' ?>">
+  					<!-- Create a hyperlink to toy.php page with toy number as parameter -->
+  					<a href="toy.php?toynum=<?= $toy2['toynum'] ?>">
+
+  						<!-- Display image of toy with its name as alt text -->
+  						<img src="<?= $toy2['imgSrc'] ?>" alt="<?= $toy2['name'] ?>">
   					</a>
-  					<h2><?= '' ?></h2>
-  					<p>$<?= '' ?></p>
+
+  					<!-- Display name of toy -->
+  					<h2><?= $toy2['name'] ?></h2>
+
+  					<!-- Display price of toy -->
+  					<p>$<?= $toy2['price'] ?></p>
+  				</div>
+				
+
+				<div class="toy-card">
+  					<!-- Create a hyperlink to toy.php page with toy number as parameter -->
+  					<a href="toy.php?toynum=<?= $toy3['toynum'] ?>">
+
+  						<!-- Display image of toy with its name as alt text -->
+  						<img src="<?= $toy3['imgSrc'] ?>" alt="<?= $toy3['name'] ?>">
+  					</a>
+
+  					<!-- Display name of toy -->
+  					<h2><?= $toy3['name'] ?></h2>
+
+  					<!-- Display price of toy -->
+  					<p>$<?= $toy3['price'] ?></p>
   				</div>
 
-  				<div class="toy-card">
-  					<a href="toy.php?toynum=<?= '' ?>">
-  						<img src="<?= '' ?>" alt="<?= '' ?>">
+
+				<div class="toy-card">
+  					<!-- Create a hyperlink to toy.php page with toy number as parameter -->
+  					<a href="toy.php?toynum=<?= $toy4['toynum'] ?>">
+
+  						<!-- Display image of toy with its name as alt text -->
+  						<img src="<?= $toy4['imgSrc'] ?>" alt="<?= $toy4['name'] ?>">
   					</a>
-  					<h2><?= '' ?></h2>
-  					<p>$<?= '' ?></p>
+
+  					<!-- Display name of toy -->
+  					<h2><?= $toy4['name'] ?></h2>
+
+  					<!-- Display price of toy -->
+  					<p>$<?= $toy4['price'] ?></p>
   				</div>
 
-  				<div class="toy-card">
-  					<a href="toy.php?toynum=<?= '' ?>">
-  						<img src="<?= '' ?>" alt="<?= '' ?>">
+
+				<div class="toy-card">
+  					<!-- Create a hyperlink to toy.php page with toy number as parameter -->
+  					<a href="toy.php?toynum=<?= $toy5['toynum'] ?>">
+
+  						<!-- Display image of toy with its name as alt text -->
+  						<img src="<?= $toy5['imgSrc'] ?>" alt="<?= $toy5['name'] ?>">
   					</a>
-  					<h2><?= '' ?></h2>
-  					<p>$<?= '' ?></p>
+
+  					<!-- Display name of toy -->
+  					<h2><?= $toy5['name'] ?></h2>
+
+  					<!-- Display price of toy -->
+  					<p>$<?= $toy5['price'] ?></p>
   				</div>
 
-  				<div class="toy-card">
-  					<a href="toy.php?toynum=<?= '' ?>">
-  						<img src="<?= '' ?>" alt="<?= '' ?>">
+
+				<div class="toy-card">
+  					<!-- Create a hyperlink to toy.php page with toy number as parameter -->
+  					<a href="toy.php?toynum=<?= $toy6['toynum'] ?>">
+
+  						<!-- Display image of toy with its name as alt text -->
+  						<img src="<?= $toy6['imgSrc'] ?>" alt="<?= $toy6['name'] ?>">
   					</a>
-  					<h2><?= '' ?></h2>
-  					<p>$<?= '' ?></p>
-  				</div>
-  				
-  				<div class="toy-card">
-  					<a href="toy.php?toynum=<?= '' ?>">
-  						<img src="<?= '' ?>" alt="<?= '' ?>">
-  					</a>
-  					<h2><?= '' ?></h2>
-  					<p>$<?= '' ?></p>
+
+  					<!-- Display name of toy -->
+  					<h2><?= $toy6['name'] ?></h2>
+
+  					<!-- Display price of toy -->
+  					<p>$<?= $toy6['price'] ?></p>
   				</div>
 
-  				<div class="toy-card">
-  					<a href="toy.php?toynum=<?= '' ?>">
-  						<img src="<?= '' ?>" alt="<?= '' ?>">
+
+				<div class="toy-card">
+  					<!-- Create a hyperlink to toy.php page with toy number as parameter -->
+  					<a href="toy.php?toynum=<?= $toy7['toynum'] ?>">
+
+  						<!-- Display image of toy with its name as alt text -->
+  						<img src="<?= $toy7['imgSrc'] ?>" alt="<?= $toy7['name'] ?>">
   					</a>
-  					<h2><?= '' ?></h2>
-  					<p>$<?= '' ?></p>
+
+  					<!-- Display name of toy -->
+  					<h2><?= $toy7['name'] ?></h2>
+
+  					<!-- Display price of toy -->
+  					<p>$<?= $toy7['price'] ?></p>
   				</div>
 
-  				<div class="toy-card">
-  					<a href="toy.php?toynum=<?= '' ?>">
-  						<img src="<?= '' ?>" alt="<?= '' ?>">
+
+				<div class="toy-card">
+  					<!-- Create a hyperlink to toy.php page with toy number as parameter -->
+  					<a href="toy.php?toynum=<?= $toy8['toynum'] ?>">
+
+  						<!-- Display image of toy with its name as alt text -->
+  						<img src="<?= $toy8['imgSrc'] ?>" alt="<?= $toy8['name'] ?>">
   					</a>
-  					<h2><?= '' ?></h2>
-  					<p>$<?= '' ?></p>
+
+  					<!-- Display name of toy -->
+  					<h2><?= $toy8['name'] ?></h2>
+
+  					<!-- Display price of toy -->
+  					<p>$<?= $toy8['price'] ?></p>
   				</div>
 
-  				<div class="toy-card">
-  					<a href="toy.php?toynum=<?= '' ?>">
-  						<img src="<?= '' ?>" alt="<?= '' ?>">
+
+				<div class="toy-card">
+  					<!-- Create a hyperlink to toy.php page with toy number as parameter -->
+  					<a href="toy.php?toynum=<?= $toy9['toynum'] ?>">
+
+  						<!-- Display image of toy with its name as alt text -->
+  						<img src="<?= $toy9['imgSrc'] ?>" alt="<?= $toy9['name'] ?>">
   					</a>
-  					<h2><?= '' ?></h2>
-  					<p>$<?= '' ?></p>
+
+  					<!-- Display name of toy -->
+  					<h2><?= $toy9['name'] ?></h2>
+
+  					<!-- Display price of toy -->
+  					<p>$<?= $toy9['price'] ?></p>
   				</div>
 
-  				<div class="toy-card">
-  					<a href="toy.php?toynum=<?= '' ?>">
-  						<img src="<?= '' ?>" alt="<?= '' ?>">
+
+				<div class="toy-card">
+  					<!-- Create a hyperlink to toy.php page with toy number as parameter -->
+  					<a href="toy.php?toynum=<?= $toy10['toynum'] ?>">
+
+  						<!-- Display image of toy with its name as alt text -->
+  						<img src="<?= $toy10['imgSrc'] ?>" alt="<?= $toy10['name'] ?>">
   					</a>
-  					<h2><?= '' ?></h2>
-  					<p>$<?= '' ?></p>
+
+  					<!-- Display name of toy -->
+  					<h2><?= $toy10['name'] ?></h2>
+
+  					<!-- Display price of toy -->
+  					<p>$<?= $toy10['price'] ?></p>
   				</div>
 
   			</section>
